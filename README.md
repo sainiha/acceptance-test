@@ -2,13 +2,15 @@ I have used Java Selenium Webdriver with cucumber. Build tool is Gradle. There i
 
 To run test on the application hosted on heroku, please use:
 
-./gradlew clean cucumber
+$ ./gradlew clean cucumber
 
-To Run tests on a locally running version ./gradlew clean cucumber -Durl=localhost:3000
+To Run tests on a locally running version
+
+$ ./gradlew clean cucumber -Durl=localhost:3000
 
 To run test on firefox
 
-./gradlew clean cucumber -Dbrowser=firefox
+$ ./gradlew clean cucumber -Dbrowser=firefox
 
 Acceptance test feature file can be found at: /src/test/resources/features
 
