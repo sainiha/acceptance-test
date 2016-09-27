@@ -94,7 +94,7 @@ public class LandingPageSteps {
     @And("^for day \"(\\d)\" the wind speed is \"([^\"]*)\" and direction is \"([^\"]*)\"$")
     public void forDayTheWindSpeedIsAndDirectionIs(int forecastDay, String windSpeed, String windDirection) throws Throwable {
         assertEquals(driver.findElement(By.xpath("//span[@data-test='speed-" + forecastDay + "']")).getText(), windSpeed);
-        // assertEquals(driver.findElement(By.xpath("//span[@data-test='direction-" + forecastDay + "']")).getAttribute("aria-label"), windDirection);
+        assertTrue(driver.findElement(By.xpath("//span[@data-test='direction-" + forecastDay + "']/*")).getAttribute("style").contains(windDirection));
     }
 
     @And("^the aggregate rainfall for day \"(\\d)\" is \"([^\"]*)\"$")

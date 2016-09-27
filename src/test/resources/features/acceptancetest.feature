@@ -65,7 +65,7 @@ Feature: All the acceptance test required can be found here
     And the forecast for day "1" is "Rain"
     And the maximum temperature for day "1" is "16°"
     And the minimum temperature for day "1" is "7°"
-    And for day "1" the wind speed is "3kph" and direction is "s"
+    And for day "1" the wind speed is "3kph" and direction is "207deg"
     And the aggregate rainfall for day "1" is "1mm"
 
   @online_test
@@ -76,5 +76,5 @@ Feature: All the acceptance test required can be found here
     And the forecast for day "4" is "Clouds"
     And the maximum temperature for day "4" is "13°"
     And the minimum temperature for day "4" is "9°"
-    And for day "4" the wind speed is "6kph" and direction is ""
+    And for day "4" the wind speed is "6kph" and direction is "237deg"
     And the aggregate rainfall for day "4" is "4mm"
