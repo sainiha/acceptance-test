@@ -1,0 +1,31 @@
+These defects are based on my understanding of the requirements and checking the data in glasgow.json file
+
+1) rounding off is not proper, it is trimmed while displaying. 13.57 should be 14 but trimmed to 13
+2) pressure was not in requirements but displayed in UI
+3) time is ahead in UI by 1 hr, for e.g in JSON it is 09:00 but in UI it is 10:00
+4) wind direction for friday heading is 171 degree but icon is not correctly displayed in UI, I guess for angles between 0-180 its not displayed correctly in UI
+5) cannot differentiate with the icon whether it is a light rain or heavy rain but is specified in JSON
+6) requirements say enter city name but could not find a box/place to enter
+7) I am not sure what is most dominant condition. My understanding is that it is the value which is occuring the most.
+    7a) based on above, the rain icon is not correctly displayed. for e.g. for wednesday mostly it is raining but in top cloudy is displayed.
+    I guess current condition is displayed for the cloud icon.
+    7b) Same goes for wind
+
+Accessibility defects
+1) Application is not keyboard accessible
+
+2) Skip to content is not present. For e.g. there are 5 different breadcrumbs, links, adverts etc on the page.
+Skip to content in html is put in order so that the user can go directly to main content
+for e.g.
+<div id="skiplink-container">
+<div>
+<a class="skiplink" href="#content">Skip to main content</a>
+</div>
+<div>Some cookie message , etc</div>
+</div>
+<main id="content" role="main">
+<div id="....
+
+3) aria-expendables are not used. With rich javascript applications which has collapsible and expandable fields as in this application it is
+advisable to use aria-expanded=true/false, aria-hidden=true/false. These aria elements are industry standard and automatically recognised by
+speech recognition software
